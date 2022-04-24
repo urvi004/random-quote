@@ -1,3 +1,14 @@
+$border-radius: 10px;
+
+@media only screen and(max-width:600px){
+  .button{
+    flex-direction: column-reverse;
+    #new-quote{
+      margin-bottom: 10px;
+    }
+  }
+}
+
 .App {
   text-align: center;
   #quote-box{
@@ -32,6 +43,7 @@
       padding: 10px;
       border: none;
       cursor: pointer;
+      font-size: 16px;
 
     }
 

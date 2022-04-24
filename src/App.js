@@ -1,8 +1,8 @@
-import React, {useEffect, useLayoutEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.scss';
 import COLORS_ARRAY  from './colorsArray.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBug, faTwitter } from '@fortawesome/free-solid-svg-icons'
+import { faBug } from '@fortawesome/free-solid-svg-icons'
 
 
 let quoteDBUrl= "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
@@ -24,7 +24,7 @@ function App() {
 useEffect(() => {
 
   fetchQuotes(quoteDBUrl)
-   },[quoteDBUrl])
+   },[])
   
   const getRandomQuote = () =>{
        let randomInteger = Math.floor(quotesArray.length*Math.random())
@@ -45,6 +45,7 @@ useEffect(() => {
     <div className="App">
       <header className="App-header" style= {{backgroundColor: accentColor }}>
         <div id="quote-box" style= {{color: accentColor}}> 
+        <obj />
          
          
           <p id="text">"{quote}" </p>
